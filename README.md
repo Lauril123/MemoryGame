@@ -30,14 +30,18 @@ En melding som gratulerer deg vil informere deg om hvor mange trekk du brukte, n
 ## Installasjon
 Klon repositoriet til din lokale maskin:
 
-bash
+
 Kopier kode
+```bash
 git clone https://github.com/your-username/memory-game.git
+```
 Gå til prosjektmappen:
 
-bash
+
 Kopier kode
+```bash
 cd memory-game
+```
 
 Åpne index.html-filen i din foretrukne nettleser for å starte spillet.
 
