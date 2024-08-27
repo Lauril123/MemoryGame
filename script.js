@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {difficultyLevel} difficulty 
      * @returns {Array}
      */
-
     function createAlphabetArray (difficulty) {
 
         // List of letters (the alphabet)
@@ -122,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {Array} cardArray 
      * @param {HTMLElement} cardElement 
      */
-
     function flipCard(cardArray, cardElement) {
         // Get card ID from data-id attribute and converts to integer.
         let cardId = parseInt(cardElement.getAttribute('data-id'));
@@ -155,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
      * 
      * @param {Array} cardArray 
      */
-
     function checkForMatch(cardArray) {
 
         // Get all card elements
@@ -219,7 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
      * Reset moveCount to 0.
      * Resets and shuffles board by calling createBoard()
      */
-
     function resetGame() {
         cardsMatched.length = 0;
         cardsChosen.length = 0;
@@ -234,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
      * Returns to menu by hiding the game board, by flipping the flipContainer (removing the 'flipped' class).
      * Resets the game.
      */
-
     const goToMenu = () => {
         flipContainer.classList.remove('flipped');
         resetGame();
@@ -256,7 +251,6 @@ document.addEventListener('DOMContentLoaded', () => {
      * Retrieves movecount from local storage.
      * If no value is stored, the moveCount is set to 0.
      */
-
     function initializeMoveCount() {
         const storedMoveCount = localStorage.getItem('moveCount')
         if (storedMoveCount) {
