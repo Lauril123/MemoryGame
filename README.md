@@ -53,13 +53,6 @@ Kopier kode
 ```bash
 git clone https://github.com/your-username/memory-game.git
 ```
-Gå til prosjektmappen:
-
-
-Kopier kode
-```bash
-cd memory-game
-```
 
 Åpne index.html-filen i din foretrukne nettleser for å starte spillet.
 
