@@ -14,7 +14,9 @@ Grønne kort ved match: Matchede kort blir grønne for å indikere en vellykket 
 
 ## Teknologier brukt
 HTML: Gir strukturen til spillet.
+
 CSS: Håndterer stil, responsivitet og animasjoner.
+
 JavaScript: Implementerer spilllogikk, inkludert matching av kort, trekktelling og animasjoner.
 
 ## Hvordan spille
