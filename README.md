@@ -2,7 +2,8 @@
 
 ## Oversikt
 
-Dette er et enkelt og interaktivt memoryspill hvor spillere prøver å matche par med kort ved å snu dem. Spillet teller antall trekk spilleren bruker, og viser en gratulasjonsmelding med fyrverkeri når alle par er matchet. Spillerens fremgang lagres i lokal lagring, slik at de kan fortsette der de slapp, selv etter å ha oppdatert siden.
+Dette er et enkelt og interaktivt memoryspill hvor man prøver å matche par med kort ved å snu dem. 
+Spillet teller antall trekk spilleren bruker, og viser en gratulasjonsmelding når alle par er matchet.
 
 ## Funksjoner
 
@@ -24,7 +25,7 @@ Prøv å finne det matchende kortet ved å klikke på et annet kort.
 Hvis kortene matcher, forblir de vendt opp og blir grønne.
 Hvis kortene ikke matcher, blir de snudd tilbake etter en kort forsinkelse.
 Fortsett å snu kort og finne matcher til alle par er matchet.
-En feiring med fyrverkeri vil dukke opp når alle par er matchet, og en melding vil informere deg om hvor mange trekk du brukte.
+En melding som gratulerer deg vil informere deg om hvor mange trekk du brukte, når du har matchet alle kortene.
 
 ## Installasjon
 Klon repositoriet til din lokale maskin:
@@ -39,3 +40,7 @@ Kopier kode
 cd memory-game
 
 Åpne index.html-filen i din foretrukne nettleser for å starte spillet.
+
+## Dokumentasjon
+
+Javascript filen er godt dokumentert (ligger i koden.)
