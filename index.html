@@ -1,0 +1,49 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory spill</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="flip-container">
+        <div class="flipper">
+            <div id="menu" class="front">
+                <h1 class="heading">Memory spill</h1>
+                <div class="innerMenu">
+                    <button id="start-button-simple">Lett</button>
+                    <button id="start-button-medium">Middels</button>
+                    <button id="start-button-hard">Vanskelig</button>
+                    <form>
+                        <label class="custom-radio">
+                            <input type='radio' checked id="card-type-alphabet" name="card-type" value="alphabet">
+                            <span class="radio-label"></span>
+                            Bokstaver
+                        </label>
+                        <label class="custom-radio">
+                            <input type='radio' id="card-type-emoji" name="card-type" value="emoji">
+                            <span class="radio-label"></span>
+                            Emojis
+                        </label>
+                    </form>
+                </div>
+            </div>
+
+            <div class="game-container back" style="display: none;">
+                <h1 class="heading">Memory spill</h1>
+                <h2 class="heading2">Match kortene med hverandre</h2>
+                <div class="game-board"></div>
+                <div class="navigation">
+                    <button id="restartButton">Start på nytt</button>
+                    <button id="backToMenuButton">Tilbake</button>
+                </div>
+                <div class="scoreboard">
+                    <p>Du har brukt: <span id="move-count">0</span> trekk</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

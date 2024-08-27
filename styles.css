@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #f0f0f0;
+} 
+
+.heading {
+    margin-bottom: 15px;
+    font-size: 60px;
+}
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 40px;
+    }
+}
+
+
+.heading2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+@media (max-width: 600px) {
+    .heading2 {
+        font-size: 18px;
+    }
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.innerMenu {
+    margin: 10px;
+    padding: 70px;
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.flip-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    button {
+        font-size: 18px;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    font-size: 20px;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.scoreboard {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#move-count {
+    font-weight: bold;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.custom-radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+.custom-radio .radio-label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+input[type='radio']:checked + .radio-label {
+    background-color: #007bff; 
+    border-color: #007bff; 
+}
+
+input[type='radio']:checked + .radio-label::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+button:hover {
+    background-color: #555;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .game-board {
+        grid-template-columns: repeat(4, 60px);
+    }
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
+
+.card.flipped {
+    background-color: #fff;
+    color: #333;
+    transform: rotateY(360deg);
+}
+
+
+.card.matched {
+    background-color: #abfa9b;
+    color: #333;
+    transform: rotateY(360deg);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+
+
+
