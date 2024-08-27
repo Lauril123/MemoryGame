@@ -41,6 +41,10 @@ Fortsett å snu kort og finne matcher til alle par er matchet.
 
 En melding som gratulerer deg vil informere deg om hvor mange trekk du brukte, når du har matchet alle kortene.
 
+## Åpme Spillet i nettleseren:
+
+## (https://lauril123.github.io/MemoryGame/)
+
 ## Installasjon
 Klon repositoriet til din lokale maskin:
 
