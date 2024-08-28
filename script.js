@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {difficultyLevel} difficulty 
      * @returns {Array}
      */
+
     function createAlphabetArray (difficulty) {
 
         // List of letters (the alphabet)
@@ -121,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * @param {Array} cardArray 
      * @param {HTMLElement} cardElement 
      */
+
     function flipCard(cardArray, cardElement) {
         // Get card ID from data-id attribute and converts to integer.
         let cardId = parseInt(cardElement.getAttribute('data-id'));
@@ -136,11 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Adds the chosen cards content and its ID to arrays.
             cardsChosen.push(cardArray[cardId]);
             cardsChosenId.push(cardId);
-
-            // Update move counter
-            updateMoveCount();
         }
-            // Check for match if two cards are chosen.
+        
+        // Check for match if two cards are picked.
         if (cardsChosen.length === 2) {
             setTimeout(() => checkForMatch(cardArray), 500);
         }
@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * 
      * @param {Array} cardArray 
      */
+
     function checkForMatch(cardArray) {
 
         // Get all card elements
@@ -188,12 +189,14 @@ document.addEventListener('DOMContentLoaded', () => {
         cardsChosen.length = 0;
         cardsChosenId.length = 0;
 
+        // Increment move counter
+        updateMoveCount();
+
         // Check if all cards have been matched. If the length of the cardsMatched is equal to the length of cardArray. 
         if (cardsMatched.length === cardArray.length) {
             if (cardsMatched.length === cardArray.length) {
                 setTimeout(() => {
                     alert(`Gratulerer! Du klarte å matche alle kortene! Du brukte ${moveCount} trekk.`);
-                    resetGame(); // Reset the game after the alert
                 }, 500);
             }
     }   }
@@ -216,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * Reset moveCount to 0.
      * Resets and shuffles board by calling createBoard()
      */
+
     function resetGame() {
         cardsMatched.length = 0;
         cardsChosen.length = 0;
@@ -230,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * Returns to menu by hiding the game board, by flipping the flipContainer (removing the 'flipped' class).
      * Resets the game.
      */
+
     const goToMenu = () => {
         flipContainer.classList.remove('flipped');
         resetGame();
@@ -251,6 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
      * Retrieves movecount from local storage.
      * If no value is stored, the moveCount is set to 0.
      */
+
     function initializeMoveCount() {
         const storedMoveCount = localStorage.getItem('moveCount')
         if (storedMoveCount) {
@@ -271,3 +277,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initializeMoveCount();
 });
+
