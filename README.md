@@ -12,16 +12,12 @@ Responsivt design: Spillet tilpasser seg forskjellige skjermstørrelser, med kna
 
 Teller antall trekk: Teller antall trekk spilleren har gjort, og lagrer tellingen i lokal lagring.
 
-Lokal lagring: Spillet lagrer antall trekk i lokal lagring.
+Mulighet for å velge vanskelighetsgrad og ulike kort
 
 Grønne kort ved match: Matchede kort blir grønne for å indikere en vellykket match.
 
 ## Teknologier brukt
-HTML: Gir strukturen til spillet.
-
-CSS: Håndterer stil, responsivitet og animasjoner.
-
-JavaScript: Implementerer spilllogikk, inkludert matching av kort, trekktelling og animasjoner.
+HTML, CSS, JavaScript.
 
 ## Hvordan spille
 
