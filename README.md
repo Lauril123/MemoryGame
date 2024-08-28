@@ -51,7 +51,7 @@ Klon repositoriet til din lokale maskin:
 
 Kopier kode
 ```bash
-git clone https://github.com/your-username/memory-game.git
+git clone https://github.com/Lauril123/MemoryGame.git
 ```
 
 Åpne index.html-filen i din foretrukne nettleser for å starte spillet.
